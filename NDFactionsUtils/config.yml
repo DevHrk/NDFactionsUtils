@@ -1,0 +1,1254 @@
+#Ativar ou Desativar
+ObsIdianBreaker: true 
+vault2-cost: 1000.0
+vault3-cost: 2000.0
+currency: 'cash'
+
+Permissões:
+  giveitem: 'nd.giveitem' #Permissão do item criado por você.
+  givegerador: 'nd.givegerador' #Permissão do gerador.
+  givecriador: 'nd.item' #Permissão do item pronto.
+  SetSpawn: 'nd.olhosetspawn' #Permissão de setspawn do olho de Deus
+  
+TnT:
+  Nome: '&c&lTNT &cde impulsão'
+  Lore:
+    - ''
+    - ' &6&lD&6escrição&7: Essa tnt especial'
+    - '  &7quando colocada no chão e ativada,'
+    - '  &7ela não destruirá os blocos próximos'
+    - '  &7Mas cuidado ela também te da dano!'
+    - ''
+  Id: 46
+  Data: 0
+  Glow: true
+  Flags: false   
+  deuatnt: '&eVocê deu a tnt para o player.'
+  AguaExplodirTnT: false
+  AguaExplodirCreeper: false
+  
+CuboPerfeito:
+  Nome: '&eCubo Perfeito &e(1)'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Tempo: &e30s'
+    - '&f •&f MobEscapar: &e50%'
+    - ''
+    - '&e&nDescrição:&7 Quando ativado, ele cria'
+    - '&7uma barreira mágica ao redor do alvo,'
+    - '&7deixando-o em um espaço onde o tempo'
+    - '&7e o espaço são distorcidos.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão esquerdo.'
+  Id: 388
+  Data: 0
+  Glow: true
+  Flags: false   
+  #CONFIG
+  Raio: 4
+  Tempo: 30
+  MundosPermitidos:
+    - mistico
+  
+Titanium:
+  Nome: '&8Titanium'
+  Lore:
+    - '&7Utilize esté item para trocar'
+    - '&7Por fragmentos.'
+  Id: 383
+  Data: 62
+  Glow: true
+  Flags: false
+  
+MagmaFlamejante:
+  Nome: '&4Magma Flamejante'
+  Lore:
+    - '&7Invoca um Magma que explode após 5s'
+    - '&7causando 10 de dano em blocos de proteção.'
+  Id: 383
+  Data: 62
+  Glow: true
+  Flags: false
+  
+BlazeExplosivo:
+  Nome: '&6Blaze Explosivo'
+  Lore:
+    - '&7Invoque um blaze que irá jogar bolas de fogo'
+    - '&7causando 3 de dano em blocos de proteção.'
+  Id: 383
+  Data: 61
+  Glow: true
+  Flags: false
+  IntervaloTiros: 1.5
+  AreaExplosao: 3.0
+  Distancia: 2.0
+  DanoDaExplosaoPorBloco: 3
+  
+Relogio_Redstone:
+  Nome: '&eRelógio de redstone'
+  Lore: 
+    - '&7Utilize este item para'
+    - '&7fazer canhões.'
+  Id: 95
+  Data: 8
+  Glow: true
+  Flags: false  
+  # CONFIG
+  min: '0.7'  #Delay mínimo
+  max: '1.8' #Delay máximo
+  delay: '0.7' #Delay padrão que virá no relógio
+  invasion: '0.7' #Delay para invasão
+  counter: '1.5' #Delay para counter
+  
+Schematic: #Esté item so deve ser Utilizado por ADMINS!! 
+  Nome: '&eVarinha do schematic'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Direito: &eSalva o 1'
+    - '&f •&f Esquerdo: &eSalva o 2'
+    - '&f •&f Shift + Esquerdo: &eDeleta uma estrutura'
+    - '&f •&f Shift + Direito: &eDeleta uma estrutura'
+    - ''
+    - '&e&nDescrição:&7 Ao selecionar 2 pontas'
+    - '&7aparecerar um campo pedindo o nome'
+    - '&7da estrutura.'
+    - ''
+    - '&e&nComo Usar:&7 Selecione uma'
+    - '&7ponta da estrutura com o botão'
+    - '&7botão direito e a outra com o'
+    - '&7esquerdo ao fazer isso digite,'
+    - '&7o nome da estrutura.'
+  Id: 280
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG
+  Blocos: 100 #Numero de blocos que podem ser gerados a cada tick. Gera De forma procedural para evitar lag.
+  VelocIdade: 1 #Em ticks numero de blocos gerados a cada x blocos
+  
+Limpador:
+  Nome: '&eLimpador de Chunk'
+  Holograma: 
+    - '&eLimpando chunk...'
+  Lore: 
+    - '&e&nDescrição:&7 Ao colocar este item em'
+    - '&7uma chunk do seu territorio, ele'
+    - '&7irá limpar toda a chunk.'
+    - ''
+    - '&e&nComo Usar:&7 Coloqueo em'
+    - '&7seu territorio clicando com'
+    - '&7o botão direito.'
+  Id: 120
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG
+  tempo: 6 #Em Segundos
+  TempoSom: 4 #Tempo em que fara som.
+  Som: 'DIG_STONE'
+  SomTerminando: 'GLASS'  
+  BlocosV: 100 #Numero de blocos que podem ser deletados a cada tick. Faz a remoção de forma procedural para evitar lag. (Caso esteja gerando lag aumente ou diminua. Tem que ver o que mais se adequa ao servIdor)
+  VelocIdade: 1 #Em ticks numero de blocos deletados a cada x blocos (Caso esteja gerando lag aumente)
+  Blocos: #Blocos que não serão limpos
+    - CHEST
+    - TRAPPED_CHEST
+    - MOB_SPAWNER
+    - BEDROCK
+    - DISPENSER
+    - DROPPER
+    - BEACON
+    - ANVIL
+    - HOPPER
+    - ENDER_CHEST
+
+#Crie Quantos Geradores você quiser!  
+Geradores:
+  BedRock:
+    Nome: '&aGerador de BedRock'
+    item: 'Bedrock' #Nome Que vai ser para givar. Ex: /givegerador maxlxd Bedrock 1
+    Lore:
+      - '&eInformações:'
+      - '&f •&f B.Gerados: &e10'
+      - '&f •&f Direção: &e&l↑'
+      - ''
+      - '&e&nDescrição:&7 Ao coloca-lo em seu territorio'
+      - '&7começarar a gerar bedrock até'
+      - '&7chegar ao chão.'
+      - ''
+      - '&e&nComo Usar:&7 Coloqueo em'
+      - '&7seu territorio clicando com'
+      - '&7o botão direito.'
+    Id: 7
+    Data: 0
+    camadas: 1.0 #Recomendo não mexer, so deixei aqui para deixar mais configuravel.
+    velocIdade: 2 #Em segundos
+    #Tem dois tipos:
+    #1 -> os blocos irão subir
+    #2 -> os blocos irão descer
+    type: 1
+    #Quantos blocos que serão gerador (caso não tenha limite coloque 0)
+    blocks: 10
+    #Caso tenha algum bloco na frente, será ignorado
+    ignore_block: false
+    Glow: true
+    Flags: false
+    
+  EndStone:
+    Nome: '&aGerador de End Stone'
+    item: 'EndStone' #Nome Que vai ser para givar. Ex: /givegerador maxlxd Bedrock 1
+    Lore:
+      - '&eInformações:'
+      - '&f •&f B.Gerados: &e∞'
+      - '&f •&f Direção: &e&l↓'
+      - ''
+      - '&e&nDescrição:&7 Ao coloca-lo em seu territorio'
+      - '&7começarar a gerar End Stone até'
+      - '&7chegar ao chão.'
+      - ''
+      - '&e&nComo Usar:&7 Coloqueo em'
+      - '&7seu territorio clicando com'
+      - '&7o botão direito.'
+    Id: 121
+    Data: 0
+    camadas: 1.0 #Recomendo não mexer, so deixei aqui para deixar mais configuravel.
+    velocIdade: 2 #Em segundos
+    #Tem dois tipos:
+    #1 -> os blocos irão subir
+    #2 -> os blocos irão descer
+    type: 2
+    #Quantos blocos que serão gerador (caso não tenha limite coloque 0)
+    blocks: 0
+    #Caso tenha algum bloco na frente, será ignorado
+    ignore_block: false
+    Glow: true
+    Flags: false
+
+GodChestPlate:
+  Nome: '&ePeitoral do Juízo Final'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Vulnerabilidade: &b20 Segundos'
+    - '&f •&f Dano.S: &b0.5 Coração'
+    - ''
+    - '&e&nDescrição:&7você ganhará força,'
+    - '&7velocidade e resistência tremendas.'
+    - '&7O poder é imenso,'
+    - '&7mas causa danos contínuos'
+    - '&7e irreversíveis ao usuário.'
+    - ''
+    - '&e&nComo Usar:&7 Basta equipa-lo'
+    - '&7e segurar o shift por 1 segundo.'
+  Id: 311
+  Data: 0
+  Glow: true
+  Flags: false   
+  #CONFIG
+  RaioMensagem: 28
+  Cooldown: 180 #Em segundos
+  VidaComeço: 2 #Vida que tera ao iniciar o evento (2 = 1 coração)
+  Vida: 0.5 #Quantidade que será retirada por segundo!
+  TempoVida: 20 #Quanto em quanto tempo vai retirar os corações do player (20 = 1 segundo)
+  Shift: 1000 #Tempo que precisa esperar no shift para começar o evento(1000 = 1 segundo)
+  RemoverEfeitos:
+  - 'cleareffects'
+  Efeitos:
+  - 'potion: speed:6:30'
+  - 'potion: increase_damage:7:30'
+  - 'potion: damage_resistance:7:30'
+  
+Lancador:
+  Nome: '&eLançador'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Altura: &b60 Blocos'
+    - ''
+    - '&e&nDescrição:&7 Ao usar este item'
+    - '&7você sera lançado para cima.'  
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Id: 401
+  Data: 0
+  Glow: true
+  Flags: false   
+  #CONFIG
+  Velocidade: 4.0 #Velocidade que subirar! / Também define a altura!
+  Tempo: 3 #Tempo de uso entre 1 e outro
+    
+BoxInsta:
+  Nome: '&eBox instantanea'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Tamanho: &b8x8'
+    - ''
+    - '&e&nDescrição:&7 Ao usar este item'
+    - '&7você criarar uma box.'  
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Id: 19
+  Data: 0
+  Glow: true
+  Flags: false   
+  #CONFIG
+  Tempo: 600 #Tempo de uso entre um e outro (Em segundos)
+  Schematic:
+  - "schematic: box"
+Meteoro:
+  Nome: '&cMeteoro'
+  Lore: 
+    - '&e&nDescrição:&7 Utilize este item para'
+    - '&7soltar meteoros em territorio inimigo.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito no'
+    - '&7territorio inimigo.'
+  Id: 385
+  Data: 0
+  Glow: true
+  Flags: false    
+  #CONFIG
+  Setting:
+    Tempo: 20 #Que Durara
+    TnTSpawn: # <tempo>:<quantIdade de tnts>
+      - '16:2'
+      - '14:3'
+      - '12:4'
+      - '10:3'
+      - '8:2'
+      - '6:4'
+      - '3:1'
+      - '1:2'
+    
+Regenerador:
+  Nome: '&aRegenerador'
+  Lore: 
+    - '&e&nDescrição:&7 Ao utilizar este item você'
+    - '&7e todos os membros de sua facção'
+    - '&7terão a vIda restaurada!'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito e'
+    - '&7segurar.'
+  Id: 373
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG
+  vida: 20.0 #QuantIdade de vIda que será regenerado!
+
+#So Funciona Com ele equipado na cabeça
+Salva-Vidas:
+  Nome: '§f(§a5§f) §cSalva-vIda' #Não mude :)
+  Lore:
+    - '&e&nDescrição:&7 Nenhuma explosão lhe dará'
+    - '&7dano e ao ser atacado uma explosão'
+    - '&7ocorrerá.'
+    - ''
+    - '&e&nComo Usar:&7 Basta equipa-lo'
+    - '&7em sua cabeça.'
+  URL-Skull: '3af59776f2f03412c7b5947a63a0cf283d51fe65ac6df7f2f882e08344565e9'
+  Glow: true
+  Flags: false      
+  #CONFIG
+  DanoExplosion: 6.0 #Dano gerado pela explosão, ao bater no player.
+  Raio: 2.0 #Raio da explosão gerada pelo player.
+  Dano: 0.0 #Dano que cada explosão da!
+  Limite: 5 #Limite de usos
+  Termina: 0 #Quando terminar
+  
+Impulsor:
+  Nome: '&aImpulsor'
+  Lore: 
+    - '&e&nDescrição:&7 Ao colocar este item no chão e passar'
+    - '&7por cima do mesmo, você irá receber uma impulsão'
+    - '&7de forma radical para frente.'
+    - ''
+    - '&e&nComo Usar:&7 Basta coloca-lo'
+    - '&7no chão e passar por cima.'
+  Id: 165
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG
+  VelocIdade: 4.0 #VelocIdade de salto
+  Altura: 2.5 #Altura que vai pular
+ 
+TnT-Arremessavel:
+  Nome: '&cTNT Arremessável'
+  Lore: 
+    - '&e&nDescrição:&7 Use está TNT para'
+    - '&7arremessar onde você estiver'
+    - '&7mirando.'
+    - ''
+    - '&e&nComo Usar:&7 Basta apontar'
+    - '&7para a direção desejada e'
+    - '&7clicar com o direito.'
+  Id: 46
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG
+  VelocIdade: 1.2 #VelocIdadde que a tnt será arremessada
+  
+Rastreador-Menu:
+  Nome: '&8Jogadores rastreados'
+  Tamanho: 54
+  Display: '&e {nome}'
+  Jogadores-lore:
+    - ''
+    - '&7Grupo: &7Membro'
+    - '&7Coins: &e{money}'
+    - '&7Facção: &e{fac}' 
+    - '' 
+    - '&fClique aqui para mais informações.' 
+     
+Rastreador:
+  Nome: '&aRastreador'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Raio: &b50 Blocos'
+    - '&f •&f Utilizar: &eEstá a 50 blocos'
+    - ''
+    - '&e&nDescrição: &7Ao utilizar este item você'
+    - '&7rastreará os jogadores perto de'
+    - '&7você.'   
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito'
+  Id: 345
+  Data: 0
+  Glow: true
+  Flags: false     
+  #CONFIG
+  Distancia: 50
+
+Totem_Da_Morte:
+  Nome: '&eTotem da Morte'
+  Lore: 
+    - '&e&nDescrição:&7 Caso você morra como este'
+    - '&7item no inventário você não perdera'
+    - '&7seus itens.'
+  Id: 416
+  Data: 0
+  Glow: true
+  Flags: false
+
+Reset_KDR:
+  Nome: '&eReset de KDR'
+  Lore: 
+    - '&e&nDescrição:&7 Ao usar este item,'
+    - '&7você tera seu KDR resetado para 0.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Id: 402
+  Data: 0    
+  Glow: true
+  Flags: true
+
+Caldeirao:
+  força-ao-deletar: true #Ativar ou desativar.Aqui ele retira o efeito de força do caldeirão quando e deletado
+  Nome: '&2Caldeirão Maluco'
+  holograma: 
+    - '&2Caldeirão Maluco'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Tempo: &b30s'
+    - '&f •&f Raio: &b8 Blocos'
+    - ''
+    - '&e&nDescrição: &7Coloque esté item no chão'
+    - '&7onde todos os jogadores da facção do'
+    - '&7player que o colocou, receberão'
+    - '&7Força Infinita dentro da área.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito no chão,'
+    - '&7com ele na mão.'
+  Glow: true
+  Flags: true
+  #CONFIG
+  tempo: 30 #Em segundos para desaparecer
+  raio: 8 #Raio do caldeirão 
+  Limite: true #Ativado você pode colocar apenas 1 item. Desativado desativa o holograma e pode colocar ilimitado!  
+  Efeito: 
+  - 'potion: increase_damage:2:4'
+
+Armadilha:
+  Nome: '&eArmadilha'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Tempo: &b20s'
+    - '&f •&f Raio: &b3x3'
+    - ''
+    - '&e&nDescrição:&7 um quadrado de teia'
+    - '&7será formado no local onde'
+    - '&7a bola de neve atingir.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Glow: true
+  Flags: false
+  #CONFIG
+  DuracaoDasTeias: 20 #segundos
+
+Poder_Maximo:
+  Nome: '&6+1 de Poder Máximo'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Limite: +1'
+    - '&f •&f L.Máximo: 20'
+    - ''
+    - '&e&nDescrição:&7 Ativando este item você'
+    - '&7aumenta seu limite de poder.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Id: 399
+  Data: 0  
+  Glow: true
+  Flags: false
+  #CONFIG
+  LimiteMaximoDePoder: 20
+
+Poder_Instantaneo:
+  Nome: '&e+1 de Poder Instantâneo'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Poder: +1'
+    - ''
+    - '&e&nDescrição:&7 Ativando este item você'
+    - '&7aumenta seu poder atual.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Id: 339
+  Data: 0    
+  Glow: true
+  Flags: false
+
+Membros_Maximo:
+  Nome: '&6+1 Membro na Facção'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Poder: +1'
+    - '&f •&f L.Máximo: 15'
+    - ''
+    - '&e&nDescrição:&7 Ativando este item você'
+    - '&7aumenta o limite de membros da facção.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Id: 399
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG
+  Limite: 15
+
+Detector_De_SlimeChunk:
+  Nome: '&eDetector de Slime Chunk'
+  Lore:
+    - '&e&nDescrição:&7 Ao clicar em um bloco com'
+    - '&7este item ele informará se você está'
+    - '&7em uma Slime Chunk.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.' 
+  Id: 341
+  Data: 0    
+  Glow: true
+  Flags: false
+
+Raio_Mestre:
+  Nome: '&eRaio Mestre'
+  Lore: 
+    - '&e&nDescrição:&7 Ao usar este item, um raio'
+    - '&7irá cair onde você você estiver olhando.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.' 
+  Id: 369
+  Data: 0
+  Glow: true
+  Flags: false    
+  #CONFIG
+  Distancia: 30 #Distancia em que o raio chegarar ao mirar no bloco    
+
+Purificador:
+  # O Id é o padrão das poções 373
+  # Escolha uma Data de uma poção arremessável
+  Id: 373
+  Data: 16422
+  Nome: '&ePurificador'
+  NomeJ: '&dPURIFICADOR' #Nome Dado ao Joga-lo
+  Lore:
+    - '&e&nDescrição:&7 Esta poção removerá'
+    - '&7todos os efeitos dos jogadores que'
+    - '&7forem atingIdos por ela.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.' 
+  Glow: true
+  Flags: true
+  
+Incinerador:
+  # O Id é o padrão das poções 373
+  # Escolha uma Data de uma poção arremessável
+  Id: 373
+  Data: 16419
+  Nome: '&eIncinerador'
+  NomeJ: '&6INCINERADOR' #Nome Dado ao Joga-lo
+  Lore:
+    - '&e&nDescrição:&7 Esta poção fara com que'
+    - '&7todos os jogadores que forem atingIdos por'
+    - '&7ela fiquem pegando fogo eternamente.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.' 
+  Glow: true
+  Flags: true  
+
+Reparador:
+  Nome: '&eReparador Instantâneo'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Porcentagem: 0.01%'
+    - ''
+    - '&e&nDescrição:&7 Ao usar este item você'
+    - '&7ira reparar toda a armadura que'
+    - '&7estiver equipada no seu corpo.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.' 
+  Id: 145
+  Data: 0  
+  Glow: true
+  Flags: false
+  #CONFIG
+  Porcentagem: 0.01 #Porcentagem minima para reparar o item. Ex: 0.1 = 10%, 0.01 = 1%  
+ 
+Agrupador_De_Pocoes:
+  Nome: '&6Agrupador de poções'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Limite: 9'
+    - ''
+    - '&e&nDescrição:&7 Agrupe suas poções de'
+    - '&7mesmo tipo para que você tenha'
+    - '&7vantagem em suas batalhas.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito, tendo'
+    - '&7poções no inventario.' 
+  Id: 154
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG
+  Limite: 9
+
+Picareta:
+  Nome: '&bPicareta de Diamante'
+  Lore:
+    - '&e&nDescrição:&7 Esta picareta tem o'
+    - '&7poder de quebrar bedrocks.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito na bedrock.'
+  Flags: false
+  #CONFIG
+  CamadaMinima: 0
+  
+Creeper:
+  Nome: '&aCreeper'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f D.Bloco: 5'
+    - ''
+    - '&e&nDescrição:&7 Use para invocar um'
+    - '&7creeper eletrizado que causará uma'
+    - '&7explosão aos blocos em volta.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito no chão.'
+  Id: 383
+  Data: 50
+  Glow: true
+  Flags: false
+  #CONFIG
+  DanoDaExplosaoPorBloco: 2
+  AreaExplosao: 2.0 #Tamanho da area de explosao
+  Distancia: 1.5 #Distancia que causarar dano total (Caso exceda a area de explosao dara dano aleatorio)
+
+Super_Creeper:
+  Nome: '&aSuper Creeper'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f D.Bloco: 5'
+    - ''
+    - '&e&nDescrição:&7 Use para invocar um'
+    - '&7creeper eletrizado que causará uma'
+    - '&7explosão aos blocos em volta.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito no chão.'
+  Id: 383
+  Data: 50
+  Glow: true
+  Flags: false
+  #CONFIG
+  DanoDaExplosaoPorBloco: 5
+  AreaExplosao: 3.0 #Tamanho da area de explosao
+  Distancia: 2.5 #Distancia que causarar dano total (Caso exceda a area de explosao dara dano aleatorio)
+
+Bola_de_Fogo:
+  Nome: '&cBola de Fogo'
+  Lore: 
+    - '&e&nDescrição:&7 Use este item para'
+    - '&7disparar uma poderosa bola de fogo'
+    - '&7que causará uma enorme explosão.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Id: 385
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG
+  DanoDaExplosaoPorBloco: 5  
+  AreaExplosao: 3.0 #Tamanho da area de explosao
+  Distancia: 2.5 #Distancia que causarar dano total (Caso exceda a area de explosao dara dano aleatorio)
+  
+#Botei aqui caso o plugin não tenha um comando de give moeda ou fragmento
+Fragmento: #Funciona com qualquer plugin de fupgrades so colocar o nome do fragmento e da moeda e igual que ta no plugin do fupgrade
+  Nome: '&eFragmento de Moeda'
+  Lore:
+    - '&e&nDescrição:&7 Ao juntar quatro fragmentos'
+    - '&7de moedas é possível realizar uma junção e'
+    - '&7transformar em &eMoeda&7.'
+    - ''
+    - '&e&nComo Usar:&7 Basta juntar'
+    - '&74 fragmentos na craft-table.'
+  Id: 351
+  Data: 11
+  Glow: true
+  Flags: false
+  #CONFIG
+  ativar-recipe: true #Aqui ativa o recipe ou não lembrando se o plugin possui o recipe DESATIVE!!!!    
+  
+Moeda: #Funciona com qualquer plugin de fupgrades so colocar o nome do fragmento e da moeda e igual que ta no plugin do fupgrade
+  Nome: '&eMoeda'  #Só mude caso o nome seja diferente!!
+  Lore:
+    - '&e&nDescrição:&7 Utilize essa moedas para' 
+    - '&7conseguir realizar melhorias da facção'
+    - '&7através do &d/f upgrades&7.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Id: 175
+  Data: 0
+  Glow: true
+  Flags: false 
+ 
+Gerador: 
+  Nome: '&cGerador de Quartzo'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Intervalo: &c10 Minutos'
+    - ''
+    - '&e&nDescrição:&7 Utilize esse item para gerar'
+    - '&7blocos de minerio de quartzo.'
+    - ''
+    - '&e&nComo Usar:&7 Basta coloca-lo'
+    - '&7em seu territorio.'
+  Id: 120
+  Data: 0
+  Glow: true
+  Flags: false  
+  #CONFIG
+  settings:
+    DelayGerador: 10 #Delay em Minutos
+    tipo: QUARTZ_ORE #Tipo de bloco que será gerado
+    MaterialGerador: STAINED_GLASS #Tipo de bloco que será para demonstrar que está sendo gerado
+    MaterialAoRedo: STEP #Material ao redor do gerador
+  
+    # Referente ao VIdro
+    AlturaX: 1
+    AlturaY: 1
+    AlturaZ: 1 
+    LarguraX: 3
+    LarguraY: 3
+    LarguraZ: 3 
+  
+    # Referente ao Bloco colocado no [Tipo]
+    # ATENÇÃO COLOCAR NO MESMO NÚMERO DO VIdRO!!
+    # EX: se no de cima o x for 3, no de baixo também terar que ser
+    ColocarX: 1
+    ColocarZ: 1 
+    ColocarLarguraX: 3
+    ColocarLarguraZ: 3   
+    comandos:
+    - "30|say Parabéns %player%, você teve sorte!"
+    - "10|give %player% emerald 3"
+    - "5|say %player% encontrou um drop raro!"
+Picareta-Hero: 
+  Nome: '&cPicareta Heroica'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Status: &cQuebrável'   
+    - ''
+    - '&e&nDescrição:&7 Utilize essa picareta para'
+    - '&7retirar os Geradores de Quartzo.'         
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito no'
+    - '&7gerador de quartzo.'
+  Id: 278
+  Data: 0
+  Glow: true
+  Flags: false    
+
+Olho-De-Deus:
+  Nome: '&bOlho de Deus'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Tempo:&e {tempo}s.'
+    - ''
+    - '&e&nDescrição:&7 Utilize esse olho para ver as'
+    - '&7bases nimigas ele funciona'
+    - ''                          
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Id: 381
+  Data: 0
+  Glow: true
+  Flags: false    
+  #CONFIG
+  Tempo: 21 #Em segundos!
+  #True = volta ao spawn quando acabar o tempo do Olho de Deus.
+  #False = volta ao ultimo lugar antes de usar o Olho de Deus.
+  VoltarAoSpawn: true
+  TempoSom: 4 #Tempo em que fara som.
+  Som: 'DIG_STONE'
+  SomTerminando: 'GLASS'
+  Back: #Localização que sera teleportado ao dar /back
+    X: 0
+    Y: 299
+    Z: 0
+    Mundo: 'Lobby' #Mundo Que será teleportado ao dar /back
+  Comandos: #Comandos que serão bloqueados
+    - '/sethome'
+    - '/home'
+    - '/warp'
+    - '/warps'
+    - '/tp'
+    - '/tpa'
+    - '/tphere'
+    - '/kit'
+    - '/gm'
+    - '/gamemode'
+    - '/craft'
+    - '/kits'
+    - '/pl'
+    - '/plugin' 
+    - '/about'
+    - '/tpaccept'
+    - '/tpaceitar'       
+    
+Muralhas:
+  Nome: '&6Muralhas'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Altura:&e {camada}.'
+    - ''
+    - '&e&nDescrição:&7 Ao utilizar, uma muralha'
+    - '&7de abóbora será contruIda.'
+    - ''                          
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito.'
+  Id: 86
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG
+  Camada-Cima: 10 #Altura que irar para cima
+  Camada-Baixo: 1 #Altura que irar para baixo
+  Material: PUMPKIN #Da Muralha  
+
+Coordenadas: 
+  Nome: '&cOpa...'
+  Lore:
+    - '&eVocê achou a coord da faccao &f{fac}'
+    - ''
+    - '&eA sua localizacao esta por'
+    - '&eX: &f{x}'
+    - '&eZ: &f{z}'
+    - ''
+    - '&aA Data que foi encontrado esse papel'
+    - '&afoi dia: &f{Data}'                      
+  Material: PAPER
+  Porcentagem: 10 #De Dropar ao matar.Caso queira desativa deixe em 0
+
+Pulso:
+  Nome: '&aPulso Eletromagnético'
+  holograma: 
+    - '&aPulso Eletromagnético'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Tempo:&e 1m.'
+    - '&f •&f Raio:&e 20.'
+    - ''
+    - '&e&nDescrição:&7 Ao Ativar esté item, o funcionamento'
+    - '&7da Redstone irá parar de funcionar'
+    - '&7temporariamente.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito no chão.'
+  Glow: true
+  Flags: false
+  #CONFIG
+  Tempo: 60 #Em segundos
+  Raio: 20 #Em blocos
+  Altura: 20 #Em Blocos
+  Limite: true #Ativado você pode colocar apenas 1 item. Desativado desativa o holograma e pode colocar ilimitado!  
+
+Anti-Trap:
+  Nome: '&eAnti Trap'
+  holograma: #So ativado se o limite estiver true
+    - '&eAnti Trap'
+  Lore: 
+    - '&eInformações:'
+    - '&f •&f Tempo:&e 30s.'
+    - '&f •&f Raio:&e 8.'
+    - ''
+    - '&e&nDescrição:&7 Coloque este item no chão'
+    - '&7para que os blocos não possam ser'
+    - '&7colocados no chão.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito no chão.'
+  Glow: true
+  Flags: true        
+  #CONFIG
+  tempo: 30 #Em segundos para desaparecer
+  Altura: 8 #Altura que não poderar colocar bloco.
+  Raio: 8 #Raio do Anti Trap 
+  Limite: true #Ativado você pode colocar apenas 1 item. Desativado desativa o holograma e pode colocar ilimitado!
+
+Gosma: 
+  Nome: '&aGosma Maligna'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Tempo:&e 8s.'
+    - ''
+    - '&e&nDescrição:&7 Ao bater em seu inimigo,'
+    - '&7ele será paralizado.'        
+    - ''
+    - '&e&nComo Usar:&7 Basta bater'
+    - '&7em um player.'
+  Glow: true
+  Flags: false        
+  #CONFIG
+  DuracaoFreeze: 8 #Em segundos
+
+Remover-Attack: 
+  Nome: '&cRemover Ataque'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Tempo:&e 10s.'
+    - ''
+    - '&e&nDescrição:&7 Esté item irá remover'
+    - '&7o ataque da sua facção'
+    - '&7durante um certo tempo.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7com o botão direito, sua'
+    - '&7facção precisa está'
+    - '&7em attack.'
+  Id: 348
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG
+  tempo: 10 #Em segundos
+  attack: 15000 #Tempo de attack em segundos. Quando acaba o Removedor de attack
+  RaioMensagem: 50 #Raio em que a mensagem que o removedor de attack foi utilizado!  
+  cooldown: 30 #Tempo para adicionar o delay de uso
+  
+TnTRadioativa: 
+  Nome: '&2TNT Radioativa'
+  Lore:
+    - '&e&nDescrição:&7 Muitos anos atras isso costumava'
+    - '&7ser uma tnt utilizada em canhões porém por'
+    - '&7causa de uma grande explosão uma super'
+    - '&7radioativIdade foi passada para essa tnt'
+    - '&7assim fazendo que você pudesse controlar ela.'
+    - ''
+    - '&e&nComo Usar: &7Para utilizar ela basta você '
+    - '&7clicar com direito mirar para o local'
+    - '&7desejado e atirar.'
+  URL-Skull: '6395d37f8885113fb7fcb8f5c61745201beff991fbd52ac5ffd791a9056d6'
+  Glow: true
+  Flags: false
+  #CONFIG      
+  Forca: 2  
+  
+Salvação:
+  Nome: '&7Salvação'
+  Lore:
+    - '&e&nDescrição:&7 Ao utilizar a Salvação os '
+    - '&7jogadores dentro de uma área de {raio} blocos serão'
+    - '&7arremessados numa distância de {blocos} blocos'
+    - ' '
+    - '&4Não se aplica a jogadores da sua facção'
+    - ' '
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7botão direito no item'
+  Id: 288 
+  Data: 0
+  Glow: true
+  Flags: false  
+  #CONFIG
+  Raio: 8
+  Blocos: 16.0  
+  
+Aspecto_Noturno:
+  Nome: '&7Aspecto Noturno'
+  Lore:
+    - '&e&nDescrição:&7 Ao utilizar o Aspecto noturno'
+    - '&7todos os jogadores que estiverem dentro'
+    - '&7de uma distância de 16 blocos irão receber,'
+    - '&7redução de velocIdade 3 por 6 segundos'
+    - '&7e Redução de visão 3 por 6 segundos.'
+    - ' '
+    - '&4Não se aplica a jogadores da sua facção'
+    - ' '
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7botão direito no item'
+  Id: 368 
+  Data: 0
+  Glow: true
+  Flags: false  
+  #CONFIG
+  Raio: 16
+  Efeitos:
+  - 'potion: slow:3:6'
+  - 'potion: blindness:3:6'  
+    
+Cabeça_de_Hydra:
+  Nome: '&7Cabeça de Hydra'
+  Lore:
+    - '&e&nDescrição:&7 Ao utilizar a Cabeça de Hydra você'
+    - '&7receberá regeneração 4 por 180 segundos,'
+    - '&7VelocIdade 3 por 180 segundos e'
+    - '&7força 3 por 180 segundos.'
+    - ' '
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7botão direito no item'
+  Id: 397 
+  Data: 1
+  Glow: true
+  Flags: false  
+  #CONFIG
+  Efeito:
+  - 'potion: regeneration:4:180'
+  - 'potion: speed:3:180'
+  - 'potion: increase_damage:3:180'   
+
+Super_Soco:
+  Nome: '&7Super Soco'
+  Lore:
+    - '&e&nDescrição:&7 Ao utilizar o Super Soco'
+    - '&7o seu próximo ataque causará {porcent}'
+    - '&7a mais de dano.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7botão direito no item'
+  Id: 369 
+  Data: 0
+  Glow: true
+  Flags: false  
+  #CONFIG
+  Porcentagem: 35
+  
+Ice-War:
+  Nome: '&bIce War'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Paralização: &e5s.'
+    - '&f •&f Raio: &e8'
+    - ''
+    - '&e&nDescrição:&7 Ao utilizar o'
+    - '&7Ice War Uma grande onda de'
+    - '&7Gelo será formada, paralizando'
+    - '&7todos os jogadores na área.'
+    - ''
+    - '&4Não se aplica a jogadores da sua facção'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7botão direito no item'
+  Id: 369 
+  Data: 0
+  Glow: true
+  Flags: false   
+  #CONFIG 
+  Material: NETHERRACK
+  tempo: 10 #Em segundos
+  raio: 8 #Raio de paralizia
+  Comandos-Bloqueados:
+  - "/spawn"
+  - "/tpa"
+  - "/tpaccept"
+  - "/tpdenny"
+  - '/home'
+  - '/sethome'
+  
+RelogioDoTempo:
+  Nome: '&eRelogio do Tempo'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Paralização: &e10s.'
+    - '&f •&f Raio: &e12.'
+    -  ''
+    - '&e&nDescrição:&7 Ao utilizalo'
+    - '&8todos os inimigos'
+    - '&8ficaram congelados no tempo.'
+    - ''
+    - '&4Não se aplica a jogadores da sua facção!'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7botão direito no item'
+  Id: 347
+  Data: 0
+  Glow: true
+  Flags: false  
+  #CONFIG
+  tempo: 10 #Em segundos
+  raio: 12 #Raio
+  raio-teleporte: 40 #Raio em que há onda temporal funcionara!
+  
+MaquinaDoTempo:
+  Nome: '&eMáquina do tempo'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Volta Temporal: &e5s.'
+    - '&f •&f Raio: &e12.'  
+    - ''  
+    - '&e&nDescrição:&7 Ao utilizalo'
+    - '&7todos os inimigos voltarão'
+    - '&8alguns segundos no tempo,'
+    - '&8em uma determinada área.'
+    - ''
+    - '&4Não se aplica a jogadores da sua facção'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7botão direito no item'
+  Id: 347 
+  Data: 0
+  Glow: true
+  Flags: false  
+  #CONFIG
+  tempo: 5 #Em segundos
+  raio: 12 #Raio
+  raio-teleporte: 40 #Raio em que há volta temporal funcionara! Aumente conforme o tempo
+  
+Cataclist:
+  Nome: '&eCataclist'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Ativação:&e 20s.'
+    - '&f •&f Raio:&e 30.'
+    - ''
+    - '&e&nDescrição:&7 Ao utilizala'
+    - '&7todos os player a uma certa'
+    - '&7distância, serão mortos,'
+    - '&7até mesmo quem a ativou.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7botão direito no item'
+  Glow: true
+  Flags: false    
+  #CONFIG
+  Raio: 30
+  Altura: 30
+  Tempo: 20 #Tempo para ativar  
+  Back: #Localização que sera teleportado ao dar /back
+    X: 0
+    Y: 299
+    Z: 0
+    Mundo: 'world' #Mundo Que será teleportado ao dar /back
+
+InversorTemporal:
+  Nome: '&eInverso Temporal' #Nome do Item
+  NomeJ: '&bInverso_Temporal' #Nome que será dado ao joga-lo 
+  Holograma:
+    - '&eInversor Temporal'
+    - ''
+    - '&aEstá ativado'
+    - '&c☢☣☢'
+  Lore:
+    - '&eInformações:'
+    - '&f •&f Duração:&e 10s.'
+    - '&f •&f T.Explosão:&e 3s.'
+    - '&f •&f Raio:&e 8.'
+    - ''
+    - '&e&nDescrição:&7 Ao jogalo se criarar uma área'
+    - '&7em que o tempo ficarar lento.'
+    - ''
+    - '&e&nComo Usar:&7 Basta clicar'
+    - '&7botão direito no item'
+  Id: 347 #Item
+  Data: 0 #Item
+  Glow: true
+  Flags: false  
+  #CONFIG 
+  Raio: 8 #Área em que surtira o efeito
+  Altura: 8 #Área em que surtira o efeito
+  Tempo: 10 #Em segundos (Duração da Zona) 
+  TempoExplodir: 3 #Em Segundos (Tempo de explodir o inversor x segundos depois de joga-la.)
+  TempoExcluir: 62 #20 = 1segundo (Tempo para excluir o item do chão depois de explodir, coloque milesimos depois.) 
+  Material: '95:2' #Material que será o nucleo do inversor
+  MaterialV: STAINED_GLASS #Verificação do material do nucleo
+  Sphere: 
+    Raio: 8
+    Tempo: 10  
+  potion:
+  - 'potion: slow:6:3' #Nivel do Slow  
+
+Formatação:
+  - ''
+  - 'k'
+  - 'M'
+  - 'B'
+  - 'T'
+  - 'Q'
+  - 'QQ'
+  - 'S' 
+  - 'SS'
+  - 'OC'
+  - 'N'
+  - 'D'
+  - 'UN'
+  - 'DD'
+  - 'TR'
+  - 'QT'
+  - 'QN'
+  - 'SD'
+  - 'SPD'
+  - 'OD'
+  - 'ND'
+  - 'VG'
+  - 'UVG' 
+  - 'DVG'
+  - 'TVG'
+  - 'QTV'
+  - 'QNV'
+  - 'SEV'
+  - 'SPV'
+  - 'OVG'
+  - 'NVG'
+  - 'TG'   
+  
+  

@@ -1,0 +1,4 @@
+name: NDFactionUtils
+version: 1.0
+main: me.nd.factionsutils.Main
+api-version: 1.13

@@ -1,0 +1,97 @@
+#   --------= Comandos =--------
+#
+# console: <comando> - Executa um comando pelo console
+# player: <comando> - Executa um comando pelo player
+#
+#   --------= Mensagens =--------
+#
+# mensagem: <mensagem> - Envia uma mensagem para o player
+# broadcast: <mensagem> - Envia uma mensagem broadcast
+# json: <mensagem> - Envia uma mensagem json
+# actionbar: <mensagem> - Envia uma mensagem actionbar
+# title: <mensagem> - Envia uma mensagem title 
+# titlesub: <título>:<subtítulo> - Envia uma mensagem com title e subtitulo
+# OBS: Deixe apenas o title ou o tittlesub (caso contrario pode haver bugs)
+#
+#   --------= Schematic =--------
+#
+# schematic: <nome> - gera uma estrutura do arquivo selecionado
+#
+#   --------= Hologramas =--------
+#
+# hologramaitem: <item>:<tempo> - Gera um Item em um holograma (Tempo em segundos)
+# hologramamensagem: <mensagem>:<tempo> - Gera um holograma com uma mensagem (Tempo em segundos)
+#
+#   --------= Utilidades =--------
+#
+# cleareffect: <efeito>,<efeito> - Limpa o efeito selecionado
+# cleareffects - limpa todos os efeito de poção que você tiver
+# repair - repara a armadura do jogador
+# agrouppotion - agrupa as poções do inventario do jogador
+# fireempty - Spawna um fogo de artificio
+# firesmall - Spawna um fogo de artificio pequeno
+# firemedium - Spawna um fogo de artificio médio
+# firebig - Spawna um fogo de artificio grande
+# sphere: <raio>:<efeito>:<tempo> - Cria uma esfera ao redor do player (Tempo em segundos)
+# potion: <poção>:<level>:<duracao>(segundos) - Da um efeito de poção ao player que ativou o item
+#
+#   --------= Area Player =--------
+# nearbyeffectclearsf: <raio> - Limpa todos os efeitos dos players ao redor, menos você e os membros de sua facção
+# nearbyeffectclears: <raio> - Limpa todos os efeitos de todos os players ao redor, menos você
+# nearbyeffectclearf: <efeito>,<efeito>:<raio> - Limpa os efeitos selecionados dos players ao redor, menos você e os membros de sua facção
+# nearbyeffectclear: <efeito>,<efeito>:<raio> - Limpa o efeito selecionado a todos os players ao redor, menos você
+# nearbyeffect: <efeito>:<nível>:<duração>:<raio> - Da um efeito em um certo raio (afeta todos os players ao redor, menos você)
+# nearbyeffectf: <efeito>:<nível>:<duração>:<raio> - Da um efeito em um certo raio (afeta todos os players ao redor, menos você e os membros de sua facção)
+# nearbymessage: <mensagem: mensagem1>,<actionbar: mensagem2>,<titlesub: mensagem3>;<raio> - Envia uma mensagem aos players ao redor (a virgula e usada para separar as mensagens) 
+# nearbymessagef:  <mensagem: mensagem1>,<actionbar: mensagem2>,<titlesub: mensagem3>;<raio> - Envia uma mensagem aos players ao redor menos aos players de sua facção (a virgula e usada para separar as mensagens) 
+#
+#   --------= JSON MESSAGE =--------
+#                           
+# 'json: <mensagem> /-/<mensagem> : ttp> <msgclicavel> : url> <url>/-/' - exemplo
+# ': ttp> <mensagem>' - utilizado antes de todos os comandos
+# '/-/ <mensagem> : ttp> <mensagem> : url> <mensagem>/-/' - cria uma url para se clicar
+# '/-/ <mensagem> : ttp> <mensagem> : exe> <comando>/-/' - executa um comando
+# '/-/ <mensagem> : ttp> <mensagem> : sgt> <comando>' - utilizado para dar uma sugestão de comando
+#                 
+#   --------= Variaveis =--------
+#
+# {player} - É trocado pelo nome do player
+# \n - pula linha
+Criador-Itens:
+  papel-vip:
+    item: 'papelvip' #Aqui e o nome que será utilizado para givar o item
+    Nome: '&aAtivar VIP Terra'
+    Lore:
+      - '&7Use este item para ativar'
+      - '&7um VIP Terra de 30 dias!'
+    Glow: true
+    Flags: false
+    Colocavel: false #Ative caso queira que o bloco seja colocavel no chão! false = não colocavel || true = colocavel
+    Id: 339
+    Data: 0
+    Perm: '' #Perm para utilizar o item. Caso não queira deixe ''
+    Executa:
+      - 'console: darvip {player} 30'
+      - 'broadcast: &e{player} ativou um VIP Terra de 30 dias!'
+      - 'actionbar: &eVocê ativou um Vip'
+      - 'titlesub: &eAtivou:&eVip Terra'
+      - 'potion: speed:1:30'
+      - 'firebig'
+  teste:
+    item: 'teste' #Aqui e o nome que será utilizado para givar o item
+    Nome: "&2Item de testes"
+    Lore:
+      - "&a&lItem criado para testar o plugin!"
+    Glow: true
+    Flags: false  
+    Colocavel: false
+    Id: 1
+    Data: 5  
+    Perm: 'usar.teste'
+    Executa:
+      - 'schematic: teste'
+      - 'json: \n&eDesculpe você não possui permissão para alterar seu vip\n/-/&bCompre VIPs nossa loja para desbloquear esta função! : ttp>&7Clique aqui para ir até nossa loja! : url>https://loja.com.br/-/ \n'
+      - "console: say {player} usou o item de testes!"
+      - 'nearbymessage: mensagem: &ateste,actionbar: &aTeste;10'
+      - 'hologramamensagem: &aTeste:10'
+      - 'sphere: 8:HAPPY_VILLAGER:10'

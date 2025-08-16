@@ -1,0 +1,299 @@
+Rajada:
+  Nome: '&aRajada'
+  item: '&eRajada I' #Como irá aparecer o encatamento
+  Lore:
+    - '&7Ao atirar uma flecha irá'
+    - '&7sair uma rajada de flechas'
+    - ' '
+    - '&fEncanta:&a ARCO'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG  
+  Porcentagem: 50
+  Quantidade: 5 #quantidade de flechas
+
+SabedoriaD:
+  Nome: '&aSabedoria do Dragão'
+  Lore:
+    - '&7aumenta os leveis de'
+    - '&7encantamentos de um item'
+    - ' '
+    - '&fEncanta:&a TODOS'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false
+
+Derreter:
+  Nome: '&aLivro de Derreter I'
+  item: '&eDerreter I' #Como irá aparecer o encatamento
+  Lore:
+    - '&8Todos os itens minerados serão'
+    - '&8derretidos e irão diretamente'
+    - '&8para seu inventário.'
+    - ' '
+    - '&fEncanta:&a PICARETA'
+    - '&eBasta clicar com esse item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false  
+    
+Sobrecarga:
+  Nome: '&aLivro de Sobrecarga'
+  item: '&eSobrecarga I' #Como irá aparecer o encatamento
+  Lore:
+    - '&8Ao hitar um Player haverá'
+    - '&8uma chance de 25% de'
+    - '&8causar 35% mais dano'
+    - ' '
+    - '&fEncanta:&a ESPADA'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false  
+  #Config
+  Porcentagem: 25
+  Dano: 35
+    
+Ragnarok:
+  Nome: '&aLivro Ragnarok'
+  item: '&eRagnarok I' #Como irá aparecer o encatamento
+  Lore:
+    - '&8Ao segurar um machado encantado'
+    - '&8com este livro você'
+    - '&8receberá Speed 3 e Força 2'
+    - ' '
+    - '&fEncanta:&a MACHADO'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false  
+  #Config  
+  Speed_Level: 3
+  Strenght_Level: 2
+    
+Campo_de_Força:
+  Nome: '&aLivro de Campo De Força'
+  item: '&eCampo De Força I' #Como irá aparecer o encatamento
+  Lore:
+    - '&8Ao ser hitado haverá'
+    - '&8uma chance de 30% do'
+    - '&8dano ser anulado'
+    - ' '
+    - '&fEncanta:&a PEITORAL'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false 
+  #Config   
+  Porcentagem: 30
+
+Aspecto_Divino:
+  Nome: '&aLivro de Aspecto Divino'
+  item: '&eAspecto Divino %nivel%' #Como irá aparecer o encatamento
+  Lore:
+    - '&8Terá o dano de'
+    - '&8queda reduzido'
+    - ' '
+    - '&fEncanta:&a BOTAS'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false  
+  LvL: "I:II:III"
+  Reducao: "4:6:8"
+  
+Furia:
+  Nome: '&aFuria'
+  item: '&eFuria I' #Como irá aparecer o encatamento
+  Lore:
+    - '&7Ao ser atacado por vários inimigos'
+    - '&7ao mesmo tempo, a sua arma começa'
+    - '&7a causar dano em área'
+    - ' '
+    - '&fEncanta:&a ESPADA'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG  
+  Quantidade: 2 #quantidade de inimigos
+  Dano: 5 #Quantidade de dano que dara em volta
+  
+Execucao:
+  Nome: '&aExecucao'
+  item: '&eExecucao I' #Como irá aparecer o encatamento
+  Lore:
+    - '&7Ao causar dano o suficiente para'
+    - '&7deixar seu inimigo com pouca'
+    - '&7vida, ele é executado.'
+    - ' '
+    - '&fEncanta:&a ESPADA'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG  
+  Porcentagem: 35 #Porcentagem de fazer a execucao
+  VidaMinima: 8.0 #Quantidade de corações minima para fazer a execucao
+  
+AutoReparar:
+  Nome: '&aAuto Reparação'
+  item: '&eAuto Reparação %nivel%' #Como irá aparecer o encatamento
+  Lore:
+    - '&7Itens com este encantamento são'
+    - '&7reparados automaticamente ao'
+    - '&7ao gastar sua durabilidade.'
+    - '' 
+    - '&7É necessário possuir os materiais'
+    - '&7para reparar o item do seu inventário'
+    - ' '
+    - '&fEncanta:&a FERRAMENTAS'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG  
+  LvL: "I:II:III"
+  Porcentagem: "50:40:30" # Porcentagem de durabilidade para acionar o reparo
+  Chance: "50:75:100" # Chance de sucesso no reparo por nível
+
+SuperArea:
+  Nome: '&aSuper Área'
+  item: '&eSuper Área I' #Como irá aparecer o encatamento
+  Lore:
+    - '&7Ao quebrar um bloco, todos os blocos'
+    - '&7que estiverem próximos também serão'
+    - '&7destruídos.'
+    - '' 
+    - '&fEncanta:&a PICARETA'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG  
+  Lado: 3 #Tamanho da área para os lados
+  Cima: 3 #Tamanho da área para cima
+  Chance: 10 #Chance de acontecer
+
+ImpetoDeBatalha:
+  Nome: '&aImpeto De Batalha'
+  item: '&eImpeto De Batalha I' #Como irá aparecer o encatamento
+  Lore:
+    - '&7Ao combar um inimigo os seus'
+    - '&7seus ataques causam dano adicional'
+    - '' 
+    - '&fEncanta:&a ESPADA'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG  
+  AtacksNecessarios: 3 #Quantidade minima de attacks para começar a dar o dano extra
+  DanoAdicional: 2.0 #Dano adicional que dara
+  TempoDeInatividade: 1 #Tempo que pararar de dar o dano adicional (Caso erre ou fique inativo)
+
+ProtecaoDivina:
+  Nome: '&aProteção Divina'
+  item: '&eProteção Divina I' #Como irá aparecer o encatamento
+  Lore:
+    - '&7Ao receber dano de vários inimigos'
+    - '&7ao mesmo tempo, fornece o efeito'
+    - '&7de resistência ou amplifica caso'
+    - '&7você já possua'
+    - '' 
+    - '&fEncanta:&a ARMADURA'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG  
+  AtacksNecessarios: 2 #Quantidade minima de players batendo para ativar
+  Resistencia_Level: 1 #Level da resistencia
+
+Dureza:
+  Nome: '&aDureza'
+  item: '&eDureza I' #Como irá aparecer o encatamento
+  Lore:
+    - '&7Possui uma chance de ignorar'
+    - '&7o dano que seria causado'
+    - '&7na sua armadura.'
+    - '' 
+    - '&fEncanta:&a ARMADURA'
+    - '&eBasta clicar com este item em cima'
+    - '&edo item que deseja encantar'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG  
+  Chance: 100 #Chance de não tirar a durabilidade da armadura.
+
+LivroAleatorio:
+  Nome: '&aLivro Aleatorio'
+  Lore:
+    - '&7Ao abrir este livro, você receberá um'
+    - '&7dos Livros de encatamento que'
+    - '&7estão listado abaixo.'
+    - ''  
+    - '&f* Lista de possíveis encantamentos:'
+    - '&eDerreter I'
+    - '&eSobrecarga I'
+    - '&eRagnarok I'
+    - '&eCampo De Força I'
+    - '&eAspecto Divino I'
+    - '&eRajada I'
+    - '&eFuria I'
+    - '&eExecucao I'
+    - '&eAuto Reparação I'
+    - '&eSuper Área I'
+    - '&eImpeto De Batalha I'
+    - '&eProteção Divina I'
+    - '&eDureza I'
+  Id: 340
+  Data: 0
+  Glow: true
+  Flags: false
+  #CONFIG  
+  Lista: #Lista dos que vão ser dados
+    - 'Derreter'
+    - 'Sobrecarga'
+    - 'Ragnarok'
+    - 'Shield'
+    - 'AspectoD'
+    - 'Rajada'
+    - 'Furia'
+    - 'Execucao'
+    - 'AutoReparar'
+    - 'SuperArea'
+    - 'ImpetoDeBatalha'
+    - 'ProtecaoDivina'
+    - 'Dureza'

@@ -1,0 +1,96 @@
+plantations:
+  sugar_cane:
+    display-name: "&aCana-de-açúcar Especial"
+    item:
+      material: SUGAR_CANE
+      name: "&aCana-de-açúcar Especial"
+      lore:
+      - "&7Planta especial que pode ser replantada."
+      - "&7Chance de drop: &f{dropChance}%"
+      - "&7Item de drop: &f{dropItem}"
+    drop-chance: 10.0
+    drop-item:
+      material: EMERALD
+      amount: 1
+  pumpkin_seeds:
+    display-name: "&6Semente de Abóbora Especial"
+    item:
+      material: PUMPKIN_SEEDS
+      name: "&6Semente de Abóbora Especial"
+      lore:
+      - "&7Planta especial que pode ser replantada."
+      - "&7Chance de drop: &f{dropChance}%"
+      - "&7Item de drop: &f{dropItem}"
+    drop-chance: 15.0
+    drop-item:
+      material: GOLD_INGOT
+      amount: 2
+  melon_seeds:
+    display-name: "&cSemente de Melancia Especial"
+    item:
+      material: MELON_SEEDS
+      name: "&cSemente de Melancia Especial"
+      lore:
+      - "&7Planta especial que pode ser replantada."
+      - "&7Chance de drop: &f{dropChance}%"
+      - "&7Item de drop: &f{dropItem}"
+    drop-chance: 12.0
+    drop-item:
+      material: DIAMOND
+      amount: 1
+  nether_wart:
+    display-name: "&4Fungo do Nether Especial"
+    item:
+      material: NETHER_STALK
+      name: "&4Fungo do Nether Especial"
+      lore:
+      - "&7Planta especial que pode ser replantada."
+      - "&7Chance de drop: &f{dropChance}%"
+      - "&7Item de drop: &f{dropItem}"
+    drop-chance: 8.0
+    drop-item:
+      material: BLAZE_ROD
+      amount: 1
+growth-event:
+  chance: 35.0
+  duration-minutes: 5
+  interval-minutes: 60
+  tnt-multiplier: 2.0
+trade-menu:
+  sugar_cane:
+    cost:
+      material: EMERALD
+      amount: 10
+  pumpkin_seeds:
+    cost:
+      material: GOLD_INGOT
+      amount: 15
+  melon_seeds:
+    cost:
+      material: DIAMOND
+      amount: 5
+  nether_wart:
+    cost:
+      material: BLAZE_ROD
+      amount: 8
+messages:
+  syntax: "&cUse: /{command} {syntax}"
+  target: "&cJogador {player} não encontrado."
+  permission: "&cVocê não tem permissão para fazer isto."
+  console: "&cApenas jogadores in-game podem realizar esta ação."
+  reload: "&aConfigurações recarregadas com sucesso."
+  inv-full: "&cO seu inventário está cheio."
+  next-event: "&aPróximo evento de crescimento em: &f{minutes} minutos e {seconds} segundos."
+  help: ""
+  plant-give: "&aVocê deu &71x {plant}&a para o jogador &7{player}&a."
+  plant-received: "&aVocê recebeu &71x {plant}&a."
+  plant-list: |
+    &cPlanta não encontrada.
+    &cPlantas disponíveis: &f{list}
+  trade-opened: "&aMenu de troca aberto."
+  trade-success: "&aVocê trocou {cost} por 1x {plant}."
+  trade-fail: "&cVocê não tem {cost} suficiente para trocar por {plant}."
+  growth-event-start: "&aEvento de crescimento iniciado! As plantas crescem instantaneamente por 5 minutos!"
+  growth-event-end: "&cEvento de crescimento terminado."
+  break-cooldown: "&cVocê deve esperar 3 segundos antes de quebrar outra {plant}."
+  invalid-plant: "&cVocê só pode plantar plantações obtidas do /loja."

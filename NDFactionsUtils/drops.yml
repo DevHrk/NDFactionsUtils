@@ -1,0 +1,148 @@
+drops:
+  COW:
+    0:
+      Material: ENDER_EYE
+      Glow: true
+      Amount: 1
+      Name: '&bOlho de Deus'
+      Enchantments: []
+      Lores:
+      - §5§oItem Épico
+      GiveConfiguratedItem: false
+      Commands:
+      - item {player_name} olho 1
+      Chance: 2.85
+      Durability: 0
+    1:
+      Material: ENDER_EYE
+      Glow: true
+      Amount: 1
+      Name: '&bOlho de Deus'
+      Enchantments: []
+      Lores:
+      - §5§oItem Épico
+      GiveConfiguratedItem: false
+      Commands:
+      - receitas give vaca {player_name} 1
+      Chance: 0.015
+      Durability: 0
+  SPIDER:
+    0:
+      Material: SNOWBALL
+      Glow: true
+      Amount: 1
+      Name: '&bArmadilha'
+      Enchantments: []
+      Lores:
+      - §5§oItem Épico
+      GiveConfiguratedItem: false
+      Commands:
+      - item {player_name} armadilha 1
+      Chance: 2.85
+      Durability: 0
+    1:
+      Material: ENDER_EYE
+      Glow: true
+      Amount: 1
+      Name: '&bOlho de Deus'
+      Enchantments: []
+      Lores:
+      - §5§oItem Épico
+      GiveConfiguratedItem: false
+      Commands:
+      - receitas give aranha {player_name} 1
+      Chance: 0.015
+      Durability: 0
+  ZOMBIE:
+    0:
+      Material: MONSTER_EGG
+      Glow: false
+      Amount: 1
+      Name: '&fCreeper'
+      Enchantments: []
+      Lores:
+      - §7§oMaterial Valioso
+      GiveConfiguratedItem: false
+      Commands:
+      - item {player_name} creeper 1
+      Chance: 2.85
+      Durability: 50
+    1:
+      Material: ENDER_EYE
+      Glow: true
+      Amount: 1
+      Name: '&bOlho de Deus'
+      Enchantments: []
+      Lores:
+      - §5§oItem Épico
+      GiveConfiguratedItem: false
+      Commands:
+      - receitas give zombie {player_name} 1
+      Chance: 0.015
+      Durability: 0
+  PIG_ZOMBIE:
+    0:
+      Material: GOLD_INGOT
+      Glow: true
+      Amount: 1
+      Name: '&eOuro De zombie'
+      Enchantments: []
+      Lores:
+      - §cVenda
+      GiveConfiguratedItem: true
+      Commands: []
+      Chance: 99.0
+      Durability: 0
+    1:
+      Material: FEATHER
+      Glow: true
+      Amount: 1
+      Name: '&aSalvação'
+      Enchantments: []
+      Lores:
+      - §9§oItem Raro
+      GiveConfiguratedItem: false
+      Commands:
+      - item {player_name} salvacao 1
+      Chance: 2.85
+      Durability: 0
+  BLAZE:
+    0:
+      Material: ENDER_PEARL
+      Glow: false
+      Amount: 1
+      Name: '&7Aspecto Noturno'
+      Enchantments: []
+      Lores:
+      - §7§oMaterial Explosivo
+      GiveConfiguratedItem: false
+      Commands:
+      - item {player_name} aspecton 1
+      Chance: 2.85
+      Durability: 0
+  IRON_GOLEM:
+    0:
+      Material: ANVIL
+      Glow: false
+      Amount: 1
+      Name: '&7Reparador'
+      Enchantments: []
+      Lores:
+      - §7§oMaterial Explosivo
+      GiveConfiguratedItem: false
+      Commands:
+      - item {player_name} reparador 1
+      Chance: 2.85
+      Durability: 0
+    1:
+      Material: IRON_INGOT
+      Glow: false
+      Amount: 3
+      Name: '&fLingote de Ferro'
+      Enchantments: []
+      Lores:
+      - §7Material Valioso
+      GiveConfiguratedItem: true
+      Commands: []
+      Chance: 100.0
+      Durability: 0

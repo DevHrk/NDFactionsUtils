@@ -1,0 +1,436 @@
+# mensagem: <mensagem> - Envia uma mensagem para o player
+# broadcast: <mensagem> - Envia uma mensagem broadcast
+# json: <mensagem> - Envia uma mensagem json
+# actionbar: <mensagem> - Envia uma mensagem actionbar
+# title: <mensagem> - Envia uma mensagem title
+# titlesub: <titulo>:<subtitulo> - Envia uma mensagem com titulo e com subtitulo
+#
+#   --------=JSON MESSAGE=--------
+#
+# 'json: <mensagem> /-/<mensagem> : ttp> <msgclicavel> : url> <url>/-/' - exemplo
+# ': ttp> <mensagem>' - utilizado antes de todos os comandos
+# '/-/ <mensagem> : ttp> <mensagem> : url> <mensagem>/-/' - cria uma url para se clicar
+# '/-/ <mensagem> : ttp> <mensagem> : exe> <comando>/-/' - executa um comando
+# '/-/ <mensagem> : ttp> <mensagem> : sgt> <comando>' - utilizado para dar uma sugestão de comando
+# 
+# {player} - É trocado pelo nome do player
+# \n - pula linha
+
+###################################################
+#                                                 #
+#                                                 #
+#                >> G E R A L                     #
+#                                                 #
+#                   I T E N S                     #
+#                                                 #
+#               G I V E  I T E N S                #
+#                                                 #
+#                                                 #
+###################################################
+Mensagens:
+  SemPermItem: '&cVocê não possui permissão para utilizar esté item.'
+  SemPerm: '&cVocê não possui permissão para executar este comando.'
+  Quantidade: '&cVocê inseriu uma quantia inválida.'
+  NaoExiste: '&cEste item não existe.'
+  Jogador: '&cEste jogador não está online.'
+  Recebeu: '&aO jogador {player} recebeu {quantia} {item}.'
+  ZonaProtegida: '&cVocê não pode usar esté item em zona protegida!' 
+  TerritorioLivre: '&cVocê não pode usar esté item em zona livre!' 
+  Limite: '&cVocê atingiu o limite de uso deste item!'
+  Vazio: '&cPara quebrar esté bloco você deve está com a mão vazia!'
+
+Menu:
+  Sem-Cash: "mensagem: &cVocê não possui Cash para isso."
+  Sem-Money: "mensagem: &cVocê não possui Money para isso."
+  Comprado: "mensagem: &aComprado com sucesso."
+
+###################################################
+#                                                 #
+#                                                 #
+#                   G E R A L                     #
+#                                                 #
+#                >> I T E N S                     #
+#                                                 #
+#               G I V E  I T E N S                #
+#                                                 #
+#                                                 #
+###################################################
+Schematic:
+  Removido:
+  - 'mensagem: &cA schematic {estrutura} foi removida do arquivo de configuração!'
+  Nao-Existe:
+  - 'mensagem: &cA schematic {estrutura} não existe no arquivo de configuração!'
+  Ponto1: 
+  - 'mensagem: &a1 Ponto definido!'
+  Ponto2: 
+  - 'mensagem: &a2 Ponto definido!'  
+  cancelado:
+  - 'actionbar: &aAção &cCancelada&a com sucesso'
+  Salvo:
+  - 'actionbar: &a<{estrutura}> salvo com sucesso!'
+  JaExiste:
+  - 'mensagem: &cUma estrutura com o nome &e"{estrutura}"&c já existe. Por favor, escolha um nome diferente.'
+  IsiraRemove:
+  - 'mensagem: &aPor favor, insira o nome da estrutura que deseja deletar'
+  - 'actionbar: &aNome da estrutura a ser deletada:'
+  Isira:
+  - 'mensagem: &aPor favor, insira o nome da estrutura:'
+  - 'actionbar: &aInsira o nome da estrutura:'
+
+CuboP:
+  Ativada: 
+  - 'actionbar: &aCuboPerfeito Ativado!'
+  MundoNaoPermitido: 
+  - 'actionbar: &cUtilizavel apenas no Mundo normal!'
+
+Regenerador:
+  Regenerado: #Mensagem para todos os membros da facção inclusive você
+    - 'actionbar: &aSua vida foi regenerada com sucesso!'
+  regen: #Mensagem apenas para você
+    - 'mensagem: &a'
+    - 'mensagem: &a ▪ Poção de regeração utilizada com sucesso.'
+    - 'mensagem: &e ▪ Seus membros tiveram a vida restaurada!'
+    - 'mensagem: &a' 
+    
+GodChestPlate:
+  Ativando: 'titlesub: &eJuizo Final:&cSendo ativado!' #Todos os player
+  Cooldown: 'mensagem: &cTente novamente em {tempo} segundos.' #Apenas o player ativando
+  JaAtivado: 'mensagem: &eO item ja está ativo!'
+  Desativar: #Apenas o player
+  - 'mensagem: &eCaso queira &cdesativar&e o juizo final'
+  - 'mensagem: &epressione &aSHIFT'
+  DontMove:  #Apenas o player
+  - 'titlesub: &cNão se:&cMecha'
+  - 'mensagem: &eSe você se mecher o juizo'
+  - 'mensagem: &efinal será &4desativado!'
+  Desativado: #Todos os player
+  - 'titlesub: &eJuizo Final:&cDesativado'
+  Morreu: #Todos os Player
+  - 'titlesub: &ePortador do Juizo Final:&eFoi &cMorto'
+  AtivadoPlayer: #Apenas o player
+  - 'mensagem: &eO peitoral do juizo final'
+  - 'mensagem: &aestá ativado você começarar'
+  - 'mensagem: &ea tomar dano!' 
+  Ativado: #Todos os players
+  - 'titlesub: &eJuizo Final:&eativado!'
+  - 'actionbar: &eJuizo Final ativado!'
+  - 'mensagem: &eJuizo Final ativado!'
+
+    
+Coordenadas:
+  Matou:
+  - 'actionbar: &aVocê achou as coordenadas de uma facção'
+
+Cataclist:
+  TittleAtivando: 
+  - 'titlesub: &eCataclist:&cSendo ativada!'
+  TittleAtivada: 
+  - 'titlesub: &eCataclist:&eativada!'
+  - 'actionbar: &eCataclist ativada!'
+  - 'mensagem: &eCataclist ativada!'
+  AindaNao: 
+  - 'actionbar: &cAinda não está ativada!'
+  NaoInteragir: 
+  - 'actionbar: &cNão pode interagir enquanto ela estiver sendo ativada!'
+  PodeInteragir: 
+  - 'actionbar: &eJá está ativada coloquea no chão para ativa-la!'
+  Ativação:
+  - 'actionbar: &eCataclist será ativada em 20s!'
+  - 'mensagem: &eCataclist será ativada em 20 segundos!'
+  Ativada-Colocar: 
+  - 'mensagem: &eCataclist está ativada, coloquea no chão'
+  - 'mensagem: &epara matar todos ao seu redor.'
+  - 'mensagem: &cEla matarar até quem a ativou!'
+    
+GosmaMaligna:
+  Tittle: 
+  - 'titlesub: &eVocê foi:&eParalizado!'
+  paralizado: 
+  - 'actionbar: &cVocê está paralizado!'
+  Saiu: 
+  - 'actionbar: &aSaiu da paralização!'
+
+CabecaHydra:
+  Ativou: 
+  - 'mensagem: &aCabeça de Hydra Ativada com sucesso!'
+  - 'actionbar: &aCabeça de Hydra Ativada com sucesso!'
+
+BoxInsta:
+  Cooldown: 
+  - 'mensagem: &cVocê tem que esperar {tempo}, para utilizar novamente'
+  Utilizado:
+  - 'actionbar: &aItem utilizado com sucesso'
+  ApenasFac:
+  - 'mensagem: &cUse apenas na área da facção'
+
+Icewar:
+  Tittle: 
+  - 'titlesub: &bUma onda de Gelo:&ete acertou!'
+  Congelado: 
+  - 'actionbar: &cVocê está congelado!'
+  Saiu: 
+  - 'actionbar: &aSaiu do congelamento!'
+  Utilizado:
+  - 'actionbar: &aItem utilizado com sucesso'
+  - 'mensagem: &eTodos os player na área foram congelados!'
+  Bloqueado: "actionbar: &cComando bloqueado!"
+
+Inversor:
+  Entrar: 
+  - 'mensagem: &aVocê entrou na área do &e&nInversor Temporal!'
+  - 'actionbar: &aVocê entrou na área do &e&nInversor!'
+  Saiu: 
+  - 'mensagem: &cVocê saiu da área do &e&nInversor Temporal!'
+  - 'actionbar: &cVocê saiu da área do &e&nInversor!'
+  
+Salvação:
+  Player-Acertado: 
+  - 'titlesub: &eVocê foi empurrado:&epara longe!'
+  Nao-Ha: 
+  - 'actionbar: &cNão há jogadores por perto.'
+  Funcionou: 
+  - 'mensagem: &aSalvação Utilizado com sucesso!'
+  - 'actionbar: &aUtilizado com sucesso!'  
+  
+AspectoNoturno:
+  Player-Acertado: 
+  - 'titlesub: &eVocê foi acertado:&epela escuridão!'
+  Nao-Ha: 
+  - 'actionbar: &cNão há jogadores por perto.'
+  Funcionou: 
+  - 'mensagem: &aAspecto Noturno Utilizado com sucesso!'
+  - 'actionbar: &aUtilizado com sucesso!'
+
+MaquinaTempo:
+  Utilizado:
+  - 'actionbar: &aUtilizado com sucesso'
+  - 'mensagem: &aMaquina do Tempo Utilizado com sucesso!'
+  Tittle: 
+  - 'titlesub: &eVocê foi acertado pela:&eonda temporal!'
+  Nao-Ha: 
+  - 'actionbar: &cNão há jogadores por perto.'
+  teleportado:
+  - 'mensagem: &eVocê foi teleportado para'
+  - 'mensagem: &ea posição em que você'
+  - 'mensagem: &eestava há {tempo} segundos'
+  
+RelogioDoTempo:
+  Tittle: 
+  - 'titlesub: &eOcorreu uma Parada:&eTemporal!'
+  ParadoNoTempo: 
+  - 'actionbar: &cO tempo está congelado!'
+  Acabou: 
+    - 'mensagem: &eParada temporal finalizada!'
+    - 'mensagem: &7'
+    - 'mensagem: &eTodos os players serão teleportados'
+    - 'mensagem: &epara a posição inicial!'
+  Interagir: 
+    - 'mensagem: &cVocê não pode interagir!'
+    - 'mensagem: &7'
+    - 'mensagem: &cEnquanto estiver ocorrendo,'
+    - 'mensagem: &cuma parada temporal.'
+    
+LimpadorChunck:
+  TempoMensagem: 5 #Caso queira adicionar mais mensagens no tempo aumente.
+  Tempo: 
+  - 'actionbar: &aChunk sendo limpada em {tempo} segundos.'
+  sucesso: 
+  - 'actionbar: &aChunk limpa com sucesso!'
+  sem-perm: 
+  - 'actionbar: &cVocê tem que ser Lider ou oficial!'
+  territorio: 
+  - 'actionbar: &cUtilize esté item em seu território.'
+
+GeradorDeCamada:
+  sem-perm: 
+  - 'actionbar: &cVocê tem que ser Lider ou oficial!'
+  territorio: 
+  - 'actionbar: &cUtilize esté item em seu território.'
+  em-attack: 
+  - 'mensagem: &cSua facção está em attack não pode colocar esté gerador!'
+  
+Lancador:
+  cooldown:
+  - 'mensagem: &cVocê tem que esperar {tempo}s, para utilizar novamente'
+  acabou: 
+  - 'actionbar: &cSeu lançador acabou!'  
+  
+Meteoro:
+  Territorio:
+  - 'mensagem: &cVocê não pode utilizar esté item em seu territorio!'
+  Utilizado: 
+  - 'actionbar: &aUtilizado com sucesso'
+  - 'mensagem: &aMeteoro Utilizado com sucesso!'
+  Tittle:
+  - 'titlesub: &c&lAtenção!:&cSeus territórios foram atacados por meteoros.'
+
+TnTRadioativa:
+  Altura:
+  - 'mensagem: &cVocê não pode ativar a TnT nesta altura!'
+  NaoPode:
+  - 'mensagem: &cEste item não pode ser colocado no chão! Mire no ar e atire!'
+  Ao-Atirar: 
+  - 'mensagem: &2Radioatividade preparada!'
+  Acabou:
+  - 'actionbar: &cAcabou seus tiros!' 
+  Restante1:
+  - 'actionbar: &a{tiros} tiro restante!'  
+  Restante:
+  - 'actionbar: &a{tiros} tiros restantes!'  
+   
+Rastreador:
+  Nao-Ha:
+  - 'actionbar: &cNão há jogadores por perto!'   
+   
+Impulsor:
+  explodir: 
+  - 'mensagem: &cEste bloco não pode ser quebrado, apenas explodido.'    
+    
+Kdr:
+  JaEstaResetado: 
+  - 'actionbar: &cSuas kills e deaths já estão 0/0!'
+  ResetadoComSucesso: 
+  - 'actionbar: &aKDR resetado com sucesso!'
+  
+PowerMax:
+  LimiteAtingido: 
+  - 'mensagem: &cVocê já está com seu poder no máximo (Máx. %maximoPoder%).'
+  UsadoComSucesso: 
+  - 'mensagem: &aSeu limite de poder foi aumentado para &e%maxpoder%&a!!'
+
+PoderInsta:
+  LimiteAtingido: 
+  - 'mensagem: &cVocê está com seu poder atual no máximo. (%poder%/%maxpoder%)'
+  UsadoComSucesso:
+  - 'mensagem: &aSeu poder atual foi aumentado para %poder%&a!!'    
+ 
+Salva-Vidas:
+  Destruido:
+  - 'actionbar: &cSeu salva-vidas quebrou.'  
+  Usos:
+  - 'actionbar: &a{usos}&c usos restantes'
+  
+Membros:
+  SemFac: 
+  - 'mensagem: &cVocê precisa estar dentro de alguma facção para poder usar este item!'
+  Limite: 
+  - 'mensagem: &cA sua facção já está com o seu limite de membros no máximo (Máx. %maximoMembros%).'
+  Sucesso: 
+  - 'mensagem: &aO limite de membros da facção foi aumentado para &e%maxmembros%&a!'
+  
+SuperSoco: 
+  Ativado: 
+  - 'actionbar: &aVocê acabou de ativar!'
+  Usado: 
+  - 'actionbar: &cVocê utilizou o supersoco!'
+  
+DetectSlimeChunk: 
+  Esta: 
+  - 'actionbar: &aÉ SlimeChunk!'
+  NaoEsta: 
+  - 'actionbar: &cNão é SlimeChunk!' 
+  
+Purificador: 
+  Title: 
+  - 'titlesub: &c&lPURIFICADOR:&cVocê foi atingido por um purificador!'
+  
+Incinerador:
+  Title: 
+  - 'titlesub: &6&lINCINERADOR:&6Você foi atingido por um incinerador!'
+  
+RaioMestre:
+  Utilizado:
+  - 'actionbar: &aUtilizado com sucesso!' 
+  
+Gerador: 
+  criativo: 
+  - 'actionbar: &cSaia do criativo para quebrar esse Gerador.'
+  picareta: 
+  - 'mensagem: &cVocê precisa de uma Picareta Heroica para remover esse Gerador.'
+  territorio: 
+  - 'actionbar: &cUtilize esté item em seu território.'
+  
+OlhoDeDeus:
+  Tempo: 
+  - 'actionbar: &cOlho de Deus acaba em {tempo} segundos.'
+  TempoMensagem: 5 #Caso queira adicionar mais mensagens no tempo aumente.
+  Acabou: 
+  - 'actionbar: &cOlho de Deus Acabou!'
+  Tittle: 
+  - 'titlesub: &aVocê está utilizando:&bOlho de Deus'
+  Comando: 
+  - 'mensagem: &cVocê não pode utilizar esté comando em quanto está utilizado o olho de deus!'
+
+AttackRemove:
+  combate: 
+  - 'actionbar: &cSua facção não esta em combate.'
+  sem-perm: 
+  - 'actionbar: &cVocê tem que ser Lider ou oficial!'
+  Utilizado: #O que aparecerar para o atacante
+  - 'titlesub: &eFoi Utilizado:&eRemovedor de attack'
+  - 'mensagem: &aEm &e10s&a a facção que você está atacando\n&avoltarar a ficar sob attack'
+  ItemUtilizado: 
+  - 'mensagem: &aVocê utilizou o removedor de attack'
+  - 'actionbar: &e10s&a para voltar ao combate'
+  cooldown: 'mensagem: &cUtilize novamente em {tempo}.'
+Agrupador:
+  Nao-Ha: 
+  - 'mensagem: &cVocê não possui poções em seu inventario.'
+  Agrupado: 
+  - 'mensagem: &aSuas poções foram agrupadas com sucesso!'
+
+Caldeirao:
+  Entrar: #Aparece apenas para o player que colocou e membros de sua fac, dentro da área designada
+  - 'actionbar: &aVocê recebeu força!' 
+  Saiu:
+  - 'actionbar: &cParou de receber força!' 
+
+Pulso:
+  Entrar: 
+  - 'actionbar: &aVocê entrou na área do &e&nPulso!'
+  Saiu: 
+  - 'actionbar: &cVocê saiu da área do &e&nPulso'
+
+Antitrap:
+  Entrar: 
+  - 'mensagem: &aVocê entrou na área do &e&nAntiTrap!'
+  - 'actionbar: &aVocê entrou na área do &e&nAntiTrap!'
+  Saiu: 
+  - 'mensagem: &cVocê saiu da área do &e&nAntiTrap'
+  - 'actionbar: &cVocê saiu da área do &e&nAntiTrap'
+
+Reparador:
+  Reparado: 
+  - 'actionbar: &aSua armadura foi reparada!'  
+  TotalmenteReparada: 
+  - 'mensagem: &cHá armadura está totalmente reparada!'
+  SemArmadura: 
+  - 'mensagem: &cVocê não está usando nenhuma armadura.'
+
+###################################################
+#                                                 #
+#                                                 #
+#                   G E R A L                     #
+#                                                 #
+#                   I T E N S                     #
+#                                                 #
+#           >>  G I V E  I T E N S                #
+#                                                 #
+#                                                 #
+###################################################
+
+Criador-Itens: 
+  comando-errado: '&e[!] &cUtilize: /giveitem <Player> <{itens}> <Quantidade>'
+  enviado: '&a{item} enviado!'
+  
+GiveGeradores:  
+  comando-errado: '&e[!] &cUtilize: /givegerador <Player> <Tipo> <Quantidade>'
+  tipo: '&cTipos: {itens}'
+  enviado: '&aGerador de {item} enviado com sucesso'
+  
+Comando-Errado:
+  Item: '&cUtilize /item <jogador> <{itens}> <quantia>.'
+  SetSpawn: '&cIncorreto, use /olho setspawn'          
+  Livro: '&cUtilize /livro <jogador> <{itens}> <quantia>.'
+        
+  

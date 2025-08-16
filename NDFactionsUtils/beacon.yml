@@ -1,0 +1,88 @@
+Settings:
+  # Raio em blocos
+  Raio: 20
+  # Time em horas (tempo em que o beacon ficará desativado)
+  Time: 12
+  
+Menu:
+  menu:
+    name: '&aBeacon Ativo'
+    lore:
+    - '&eInformações:'
+    - ''
+    - '&f •&f Funcionamento: &e{status}'
+    - '&f •&f Raio: &e{raio}&7/&e100'
+    - '&f •&f Efeitos: &e{efeitosativos}/{effect}'
+    - '&f •&f Up. Raio: {Upgrades}/4'
+    - ''
+    - '&aPode adicionar mais efeitos!'
+    - '&aPode aumentar o raio!'
+  
+Beacon:
+  name: '&bSinalizador Supremo'
+  lore:
+    - '&7Este sinalizador não é destruido por'
+    - '&7explosões e possui efeitos adicionais.'
+    - ''
+    - '&7Ao ser danificado por explosões, este'
+    - '&7Sinalizador é desativado por 12 horas.'
+
+Ativadores:
+  Velocidade: 
+    id: 1
+    data: 0 
+    efeito: 'speed:1' # EFEITO:LVL
+    material: SUGAR
+    name: '&eAtivador de velocidade I'
+    lore:
+      - '&7Clique em um beacon'
+      - '&7para liberar o efeito'
+      - '&7de velocidade.'
+      
+Chaves:
+  MultiEfeitos:
+    id: 1
+    data: 0 
+    type: multi_effects
+    Quantia: 1 # Adiciona +1
+    material: NETHER_STAR
+    name: '&eAtivar MultiEfeitos'
+    lore:
+      - ''
+      - '&7Clique em um beacon'
+      - '&7para liberar mais espaço'
+      - '&7para colocar efeitos.'
+  Raio:
+    id: 1
+    data: 0 
+    type: radius
+    raio: 20 # O que será adicionado a mais
+    material: COMPASS
+    name: '&eAtivar Raio de funcionamento'
+    lore:
+      - ''
+      - '&7Clique em um beacon'
+      - '&7para liberar mais espaço'
+      - '&7para colocar efeitos.'
+ 
+Messages:
+  No_Perm: '&cVocê não tem permissão para executar esse comando.'
+  No_Faction: '&cVocê precisa de uma facção para colocar o beacon.'
+  Need_Claim: '&cVocê precisa estar no território da sua facção.'
+  Player_Not_Found: '&cPlayer não encontrado.'
+  Gived: '&aBeacon givado com sucesso!'
+  Placed: '&aBeacon colocado com sucesso!'
+  Withdrawn: '&aBeacon retirado com sucesso!'
+  Broken:
+    - ''
+    - ' &cOps, este beacon está quebrado!'
+    - ' &cAinda falta %time%'
+    - ' &cPara poder retirar o beacon.'
+    - ''
+  ZonaProtegida: '&cNão pode usar ativadores em zona protegida.'
+  MaxEffects: '&cEste beacon já atingiu o limite de efeitos.'
+  MaxRadius: '&cEste beacon já atingiu o limite de raio.'
+  EffectApplied: '&aEfeito %effect% adicionado ao beacon.'
+  MultiEffectsApplied: '&aCapacidade de efeitos aumentada para %limit%.'
+  RadiusApplied: '&aRaio do beacon aumentado para %radius% blocos.'
+  NoPyramid: '&cO beacon precisa de uma pirâmide válida para funcionar.'

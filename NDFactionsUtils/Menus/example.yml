@@ -1,0 +1,24 @@
+name: ExampleMenu
+inventoryTitle: "&6Example Menu"
+size: 27
+cancelClick: true
+command: examplemenu
+permission: ndfactionsutils.menu.example
+items:
+  diamond:
+    id: 264
+    amount: 1
+    data: 0
+    name: "&bDiamond Item"
+    lore:
+      - "&7Click to purchase a diamond!"
+      - "&7Cost: 100 cash"
+    enchantments:
+      - "1;1"
+    slot: 13
+    preco: 50
+    cash: 100
+    commandLeftClick: "give {player} diamond 1"
+    commandRightClick: ""
+    consoleLeftClick: true
+    consoleRightClick: false
