@@ -6,7 +6,9 @@ import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
+import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -41,63 +43,68 @@ public class DropListener implements Listener {
 
     @EventHandler
     public void onEntityDeath(EntityDeathEvent event) {
-        if (!(event.getEntity().getKiller() instanceof Player)) return;
+        Entity entity = event.getEntity();
+        Player killer = ((LivingEntity) entity).getKiller();
+        if (killer == null) return;
 
-        Player player = event.getEntity().getKiller();
-        EntityType entityType = event.getEntityType();
+        EntityType entityType = entity.getType();
         ConfigurationSection dropsSection = config.getConfigurationSection("drops." + entityType.name());
 
         if (dropsSection == null) {
-            Main.get().getLogger().info("No drop configuration found for entity: " + entityType.name());
             return;
         }
 
-        // Clear vanilla drops if custom drops are configured
+        // Quantidade de mobs representados pelo stack
+        int stackAmount = entity.hasMetadata("StackAmount") 
+                ? entity.getMetadata("StackAmount").get(0).asInt() 
+                : 1;
+
+        // XP proporcional
+        int baseXP = event.getDroppedExp();
+        event.setDroppedExp(baseXP * stackAmount);
+
+        // Clear vanilla drops se tiver configuração custom
         event.getDrops().clear();
 
-        // Get Looting level from player's held item
-        ItemStack weapon = player.getInventory().getItemInHand();
+        // Looting do item do player
+        ItemStack weapon = killer.getInventory().getItemInHand();
         int lootingLevel = weapon != null && weapon.hasItemMeta() && weapon.getItemMeta().hasEnchant(Enchantment.LOOT_BONUS_MOBS) 
                 ? weapon.getItemMeta().getEnchantLevel(Enchantment.LOOT_BONUS_MOBS) 
                 : 0;
-        double lootingMultiplier = 1.0 + (lootingLevel * 0.5); // Exemplo: Looting I = +50%, II = +100%, III = +150%
+        double lootingMultiplier = 1.0 + (lootingLevel * 0.5);
 
-        // Handle multiple drop configurations for the same entity
+        // Para cada configuração de drop do mob
         for (String key : dropsSection.getKeys(false)) {
             ConfigurationSection dropSection = dropsSection.getConfigurationSection(key);
             if (dropSection == null) {
-                Main.get().getLogger().warning("Invalid drop section: " + key + " for entity: " + entityType.name());
                 continue;
             }
 
             double baseChance = dropSection.getDouble("Chance", 0.0);
-            double adjustedChance = baseChance * lootingMultiplier; // Apply Looting multiplier
-            if (random.nextDouble() > adjustedChance) {
-                Main.get().getLogger().info("Drop failed for " + key + " on " + entityType.name() + 
-                        " (base chance: " + baseChance + ", adjusted chance: " + adjustedChance + ")");
-                continue;
-            }
+            double adjustedChance = baseChance * lootingMultiplier;
 
-            // Handle item drop if configured
-            if (dropSection.getBoolean("GiveConfiguratedItem", false)) {
-                ItemStack item = createItem(dropSection);
-                if (item != null) {
-                    event.getDrops().add(item);
-                    Main.get().getLogger().info("Added drop: " + item.getType().name() + " for entity: " + entityType.name());
-                } else {
-                    Main.get().getLogger().warning("Failed to create item for drop: " + key + " for entity: " + entityType.name());
+            // Executa o drop proporcional ao stack
+            for (int i = 0; i < stackAmount; i++) {
+                if (random.nextDouble() > adjustedChance) continue;
+
+                // Item configurado
+                if (dropSection.getBoolean("GiveConfiguratedItem", false)) {
+                    ItemStack item = createItem(dropSection);
+                    if (item != null) {
+                        event.getDrops().add(item);
+                    }
                 }
-            }
 
-            // Execute commands if they exist
-            List<String> commands = dropSection.getStringList("Commands");
-            for (String command : commands) {
-                command = command.replace("{player_name}", player.getName());
-                Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
-                Main.get().getLogger().info("Executed command: " + command + " for entity: " + entityType.name());
+                // Comandos
+                List<String> commands = dropSection.getStringList("Commands");
+                for (String command : commands) {
+                    command = command.replace("{player_name}", killer.getName());
+                    Bukkit.dispatchCommand(Bukkit.getConsoleSender(), command);
+                }
             }
         }
     }
+
 
     private ItemStack createItem(ConfigurationSection section) {
         try {
